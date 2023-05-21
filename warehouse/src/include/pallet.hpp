@@ -9,7 +9,7 @@ std::string itemName;
 int itemCapacity;
 
 public:
-Pallet(std::string itemName, int itemCapacity, int itemCount);\
+Pallet(std::string itemName, int itemCapacity, int itemCount);
 Pallet();
 std::string getItemName();
 int getItemCount();

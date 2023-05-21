@@ -4,7 +4,7 @@
 
 class Warehouse{
 private:
-std::vector<Employee> Employee;
+std::vector<Employee> Employees;
 std::vector<Shelf> Shelf;
 
 public:
@@ -12,5 +12,5 @@ Warehouse();
 void addEmployee(Employee employee);
 void addShelf(Shelf shelf);
 bool rearrengeShelf(Shelf& shelf);
-bool pickItems(std::string itemName);
+bool pickItems(std::string itemName, int itemCount);
 };
