@@ -1,4 +1,5 @@
 #include "src\include\warehouse.hpp"
+#include "src\include\shelf.hpp"
 
 Warehouse::Warehouse(){};
 
@@ -10,10 +11,10 @@ void Warehouse::addShelf(Shelf shelf){
     Shelves.push_back(shelf);
 };
 
-// bool rearrengeShelf(Shelf& shelf){
+bool Warehouse::rearrengeShelf(Shelf& shelf){
 
-// };
+};
 
-bool pickItems(std::string itemName, int itemCount){
+bool Warehouse::pickItems(std::string itemName, int itemCount){
     
 };
