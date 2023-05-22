@@ -1,18 +1,23 @@
 #include "src\include\shelf.hpp"
 
-Shelf::Shelf();
+Shelf::Shelf(){};
 
-bool swapPallet(int slot, int slot2){
-    std::array temp = pallets[ slot];
+bool Shelf::swapPallet(int slot, int slot2){
+    Pallet temp = pallets[slot];
     pallets[slot] = pallets[slot2];
     pallets[slot2] = temp;
 };
 
+bool Pallet::isEmpty(){
+    if (this->itemCount == 0){
+        return true;
+    };
+    return false;
+};
 
-// virtual bool isEmpty(){
-
-// };
-
-// virtual bool isFull(){
-
-// };
+bool Pallet::isFull(){
+    if (this->itemCount == itemCapacity){
+        return true;
+    };
+    return false;
+};

@@ -1,37 +1,58 @@
 #include "src\include\pallet.hpp"
 
-Pallet(std::string itemName, int itemCapacity, int itemCount){
+Pallet::Pallet(std::string itemName, int itemCapacity, int itemCount){
     this-> itemName = itemName;
     this-> itemCapacity = itemCapacity;
     this-> itemCount = itemCount;
 };
 
-Pallet::Pallet();
+Pallet::Pallet(){};
 
 std::string Pallet::getItemName(){
-    return this-> name;
+    return this-> itemName;
 };
 
 int Pallet::getItemCount(){
     this-> itemCount = itemCount;
 };
 
-int getRemainingSpace(){
+int Pallet::getRemainingSpace(){
     return this-> itemCapacity;
 };
 
-// bool reallocateEmptyPallet(std::string itemName, int itemCapacity){
-    
-// };
+bool Pallet::reallocateEmptyPallet(std::string itemName, int itemCapacity){
+    if (this->itemName != "" && this->itemCount == 0){
+        this->itemName == itemName;
+        this->itemCount == itemCount;
+        return true;
+    };   
+    return false;
+};
 
-// bool takeOne(){
+bool Pallet::takeOne(){
+    if(itemCount > 0){
+        this->itemCount -= 1;
+    };
+    return false;
+};
 
-// };
+bool Pallet::putOne(){
+    if(itemCount >= 0){
+        this->itemCount += 1;
+    };
+    return false;
+};
 
-// bool putOne();
+bool Pallet::isEmpty(){
+    if (this->itemCount == 0){
+        return true;
+    };
+    return false;
+};
 
-
-
-// virtual bool isEmpty();
-
-// virtual bool isFull();
+bool Pallet::isFull(){
+    if (this->itemCount == itemCapacity){
+        return true;
+    };
+    return false;
+};

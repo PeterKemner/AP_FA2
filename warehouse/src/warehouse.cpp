@@ -1,13 +1,13 @@
 #include "src\include\warehouse.hpp"
 
-Warehouse(){};
+Warehouse::Warehouse(){};
 
-void addEmployee(Employee employee){
-    Employees.push_back(this-> employee);
+void Warehouse::addEmployee(Employee employee){
+    Employees.push_back(employee);
 };
 
-void addShelf(Shelf shelf){
-    Shelf.push_back(this-> shelf);
+void Warehouse::addShelf(Shelf shelf){
+    Shelves.push_back(shelf);
 };
 
 // bool rearrengeShelf(Shelf& shelf){
