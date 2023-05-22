@@ -1,4 +1,4 @@
-#include "src\include\pallet.hpp"
+#include "..\src\include\pallet.hpp"
 
 Pallet::Pallet(std::string itemName, int itemCapacity, int itemCount){
     this-> itemName = itemName;

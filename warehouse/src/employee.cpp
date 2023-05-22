@@ -1,9 +1,7 @@
-#include "src\include\employee.hpp"
+#include "..\src\include\employee.hpp"
+#include <string>
 
-Employee::Employee(std::string const name, bool forkliftCertificate){
-    std::string name, 
-    bool forkliftCertificate;
-};
+Employee::Employee(std::string name, bool forkliftCertificate):name(name), forkliftCertificate(forkliftCertificate){};
 
 std::string Employee::getName(){
     return this->name;

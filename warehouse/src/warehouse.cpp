@@ -1,5 +1,6 @@
 #include "src\include\warehouse.hpp"
 #include "src\include\shelf.hpp"
+#include "src\include\employee.hpp"
 
 Warehouse::Warehouse(){};
 
@@ -12,7 +13,10 @@ void Warehouse::addShelf(Shelf shelf){
 };
 
 bool Warehouse::rearrengeShelf(Shelf& shelf){
+    if (getForkliftCertificate == true){
 
+    };
+    return false;
 };
 
 bool Warehouse::pickItems(std::string itemName, int itemCount){
