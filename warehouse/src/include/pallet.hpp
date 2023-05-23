@@ -3,9 +3,9 @@
 
 class Pallet: public IContainer{
     private:
-        int itemCount;
-        std::string itemName;
-        int itemCapacity;
+        mutable int itemCount;
+        mutable std::string itemName;
+        mutable int itemCapacity;
 
     public:
         Pallet(std::string itemName, int itemCapacity, int itemCount);
