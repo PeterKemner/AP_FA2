@@ -1,11 +1,10 @@
 #include <array>
-#include "src\include\pallet.hpp"
-#include "src\include\IContainer.hpp"
+#include "pallet.hpp"
+#include "IContainer.hpp"
 
 class Shelf: public IContainer{
-    private:
-        std::array<Pallet, 4> pallets;
     public:
+        std::array<Pallet, 4> pallets;
         Shelf();
         bool swapPallet(int slot, int slot2);
         virtual bool isEmpty();
