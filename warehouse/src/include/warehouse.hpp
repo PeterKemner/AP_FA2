@@ -1,3 +1,4 @@
+#pragma once
 #include "employee.hpp"
 #include "shelf.hpp"
 #include <vector>

@@ -8,20 +8,20 @@ bool Shelf::swapPallet(int slot, int slot2){
         pallets[slot] = pallets[slot2];
         pallets[slot2] = temp;
         return true;
-    };
+    }
     return false;
 };
 
-bool Pallet::isEmpty(){
+bool Shelf::isEmpty(){
     if (this->itemCount == 0){
         return true;
-    };
+    }
     return false;
 };
 
-bool Pallet::isFull(){
+bool Shelf::isFull(){
     if (this->itemCount == itemCapacity){
         return true;
-    };
+    }
     return false;
 };

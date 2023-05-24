@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include "IContainer.hpp"
 
@@ -16,6 +17,6 @@ class Pallet: public IContainer{
         bool reallocateEmptyPallet(std::string itemName, int itemCapacity);
         bool takeOne();
         bool putOne();
-        virtual bool isEmpty();
-        virtual bool isFull();
+        bool isEmpty() override;
+        bool isFull() override;
 };
