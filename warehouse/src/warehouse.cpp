@@ -21,14 +21,14 @@ void Warehouse::addShelf(Shelf shelf){
 // };
 
 bool Warehouse::pickItems(std::string itemName, int itemCount){
-        int totalCount = 0;
-        for (int x = 0; x < Shelves.size(); x++){
-            for (int i; i < 3; i++){
-                if (Shelves[x].pallets[i].getItemName() == itemName){
-                    totalCount += Shelves[x].pallets[i].getItemCount();
-                }; 
-            };
+    int totalCount = 0;
+    for (int x = 0; x < Shelves.size(); x++){
+        for (int i; i < 3; i++){
+            if (Shelves[x].pallets[i].getItemName() == itemName){
+                totalCount += Shelves[x].pallets[i].getItemCount();
+            }; 
         };
+    };
     if (totalCount - itemCount > 0){ 
         for (int x = 0; x < Shelves.size(); x++){
             for (int i; i < 3; i++){
@@ -37,10 +37,10 @@ bool Warehouse::pickItems(std::string itemName, int itemCount){
                     totalCount -= temp;
                     for (int y; y < temp; y++){
                         Shelves[x].pallets[i].takeOne();
+                    return true;
                     };
                 };
             };
         };
     };
-    return true;
 };
