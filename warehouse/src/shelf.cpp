@@ -13,14 +13,14 @@ bool Shelf::swapPallet(int slot, int slot2){
 };
 
 bool Shelf::isEmpty(){
-    if (this->itemCount == 0){
+    if (this->pallets.size() == 0){
         return true;
     }
     return false;
 };
 
 bool Shelf::isFull(){
-    if (this->itemCount == itemCapacity){
+    if (this->pallets.size() == 4){
         return true;
     }
     return false;
