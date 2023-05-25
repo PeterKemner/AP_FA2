@@ -42,5 +42,7 @@ bool Warehouse::pickItems(std::string itemName, int itemCount){
                 };
             };
         };
-    };
+    }else{
+        return false;
+    }
 };
