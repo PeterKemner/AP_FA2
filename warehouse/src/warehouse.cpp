@@ -2,6 +2,7 @@
 #include "..\src\include\shelf.hpp"
 #include "..\src\include\employee.hpp"
 #include "..\src\include\pallet.hpp"
+#include <iostream>
 
 Warehouse::Warehouse(){};
 
@@ -22,20 +23,20 @@ void Warehouse::addShelf(Shelf shelf){
 
 bool Warehouse::pickItems(std::string itemName, int itemCount){
     int totalCount = 0;
-    for (int x = 0; x < Shelves.size(); x++){
-        for (int i; i < 3; i++){
+    for (int x = 0; x < Shelves.size(); ++x){
+        for (int i; i < 3; ++i){
             if (Shelves[x].pallets[i].getItemName() == itemName){
                 totalCount += Shelves[x].pallets[i].getItemCount();
             }; 
         };
     };
     if (totalCount - itemCount > 0){ 
-        for (int x = 0; x < Shelves.size(); x++){
-            for (int i; i < 3; i++){
+        for (int x = 0; x < Shelves.size(); ++x){
+            for (int i; i < 3; ++i){
                 if (Shelves[x].pallets[i].getItemName() == itemName){
                     int temp = Shelves[x].pallets[i].getItemCount();
                     totalCount -= temp;
-                    for (int y; y < temp; y++){
+                    for (int y; y < temp; ++y){
                         Shelves[x].pallets[i].takeOne();
                     return true;
                     };

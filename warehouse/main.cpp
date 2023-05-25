@@ -5,32 +5,59 @@ int main(){
     // std::cout << "Hello world" << std::endl;
 
     Warehouse warehouse = Warehouse();
-    warehouse.addShelf(Shelf());
-    warehouse.addEmployee(Employee("Bob", true));
-    warehouse.addEmployee(Employee("Gert", false));
-    warehouse.addEmployee(Employee("Mark", true));
+    Shelf shelf1 = Shelf();
+    shelf1.pallets = {
+        Pallet("Books", 100, 40), 
+        Pallet("Boxes", 100, 10), 
+        Pallet("Books", 100, 20), 
+        Pallet("Books", 100, 20)
+    };
 
-    // for(int x = 0; x < warehouse.Employees.size(); x++){
-    //     std::cout << warehouse.Employees[x];
+    Shelf shelf2 = Shelf();
+    shelf2.pallets = {
+        Pallet("Books", 100, 15), 
+        Pallet("Boxes", 100, 20), 
+        Pallet("Books", 100, 5), 
+        Pallet("Boxes", 100, 30)
+    };
+
+    Shelf shelf3 = Shelf();
+    shelf3.pallets = {
+        Pallet("Toy Bears", 100, 20), 
+        Pallet("Toy Bears", 100, 10), 
+        Pallet(), 
+        Pallet("Toy Bears", 100, 30)
+    };
+    
+    warehouse.addShelf(shelf1);
+    warehouse.addShelf(shelf2);
+    warehouse.addShelf(shelf3);
+
+    warehouse.pickItems("Books", 10);
+
+    std::cout << shelf1.pallets[0].getItemName() << ", " << shelf1.pallets[0].getItemCount();
+
+    // int totalCount = 0;
+    // for (int x = 0; x < warehouse.Shelves.size(); ++x){
+    //     std::cout << warehouse.Shelves[0].pallets[0].getItemName();
+    //     for (int i; i < 3; ++i){
+    //         if (warehouse.Shelves[x].pallets[i].getItemName() == "iPhone"){
+    //             totalCount += warehouse.Shelves[x].pallets[i].getItemCount();
+    //         }; 
+    //     };
+    // };
+    // if (totalCount - 20 > 0){ 
+    //     for (int x = 0; x < warehouse.Shelves.size(); ++x){
+    //         for (int i; i < 3; ++i){
+    //             if (warehouse.Shelves[x].pallets[i].getItemName() == "iPhone"){
+    //                 int temp = warehouse.Shelves[x].pallets[i].getItemCount();
+    //                 totalCount -= temp;
+    //                 for (int y; y < temp; ++y){
+    //                     warehouse.Shelves[x].pallets[i].takeOne();
+    //                 };
+    //             };
+    //         };
+    //     };
     // }
-
-    Pallet pallet1 = Pallet("iPhone", 250, 21);
-    Pallet pallet2 = Pallet("Sink", 8, 5);
-    Pallet pallet3 = Pallet("Knife", 500, 233);
-    Pallet pallet4 = Pallet("Laptop", 50, 2);
-
-    std::cout << pallet1.getItemCount() << ", " << pallet1.getItemName() << "\n";
-    std::cout << pallet2.getItemCount() << ", " << pallet2.getItemName() << "\n";
-    std::cout << pallet3.getItemCount() << ", " << pallet3.getItemName() << "\n";
-    std::cout << pallet4.getItemCount() << ", " << pallet4.getItemName() << "\n";
-
-    std::cout << pallet2.getRemainingSpace() << ", " << "\n";
-
-    // pallet3.reallocateEmptyPallet("Mirror", 50);
-
-    pallet1.takeOne();
-    // warehouse.pickItems("iPone", 20);
-    std::cout << pallet1.getItemCount() << ", " << pallet1.getItemName() << "\n";
-
     return 1;
 };
