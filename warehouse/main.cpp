@@ -33,31 +33,47 @@ int main(){
     warehouse.addShelf(shelf2);
     warehouse.addShelf(shelf3);
 
-    warehouse.pickItems("Books", 10);
+    // warehouse.pickItems("Books", 10);
 
-    std::cout << shelf1.pallets[0].getItemName() << ", " << shelf1.pallets[0].getItemCount();
+    // std::cout << shelf1.pallets[0].getItemName() << ", " << shelf1.pallets[0].getItemCount() << "\n";
+    // std::cout << shelf1.pallets[2].getItemName() << ", " << shelf1.pallets[2].getItemCount();
 
-    // int totalCount = 0;
-    // for (int x = 0; x < warehouse.Shelves.size(); ++x){
-    //     std::cout << warehouse.Shelves[0].pallets[0].getItemName();
-    //     for (int i; i < 3; ++i){
-    //         if (warehouse.Shelves[x].pallets[i].getItemName() == "iPhone"){
-    //             totalCount += warehouse.Shelves[x].pallets[i].getItemCount();
-    //         }; 
-    //     };
-    // };
-    // if (totalCount - 20 > 0){ 
-    //     for (int x = 0; x < warehouse.Shelves.size(); ++x){
-    //         for (int i; i < 3; ++i){
-    //             if (warehouse.Shelves[x].pallets[i].getItemName() == "iPhone"){
-    //                 int temp = warehouse.Shelves[x].pallets[i].getItemCount();
-    //                 totalCount -= temp;
-    //                 for (int y; y < temp; ++y){
-    //                     warehouse.Shelves[x].pallets[i].takeOne();
-    //                 };
-    //             };
-    //         };
-    //     };
-    // }
+    int totalCount = 0;
+    for (int x = 0; x < warehouse.shelves.size(); x++){
+        for (int i; i < 4; i++){
+            if (warehouse.shelves[x].pallets[i].getItemName() == "Books"){
+                totalCount += warehouse.shelves[x].pallets[i].getItemCount();
+            }; 
+        };
+    };
+    std::cout << totalCount << "\n";
+    if (totalCount - 20 > 0){ 
+        for (int x = 0; x < warehouse.shelves.size(); x++){
+            if (totalCount == 0){
+                std::cout << "klaar" << "\n";
+                break;
+                }
+            for (int i = 0; i < 4; i++){
+                if (warehouse.shelves[x].pallets[i].getItemName() == "Books"){
+                    int temp = warehouse.shelves[x].pallets[i].getItemCount();
+                    std::cout << temp << "\n";
+                    if (totalCount == 0){
+                        std::cout << "klaar" << "\n";
+                        break;
+                    }
+                    if (temp > totalCount){
+                        temp = totalCount;
+                    }
+                    for (int y; y < temp; ++y){
+                        warehouse.shelves[x].pallets[i].takeOne();
+                        }     
+                    }
+                }
+            }
+        }
+
+    warehouse.pickItems("Books", 23);
+    std::cout << shelf1.pallets[0].getItemName() << ", " << shelf1.pallets[0].getItemCount() << "\n";
+    std::cout << shelf1.pallets[2].getItemName() << ", " << shelf1.pallets[2].getItemCount();
     return 1;
 };
