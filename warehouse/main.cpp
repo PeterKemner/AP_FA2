@@ -2,7 +2,6 @@
 #include "src\include\warehouse.hpp"
 
 int main(){
-    // std::cout << "Hello world" << std::endl;
 
     Warehouse warehouse = Warehouse();
     Shelf shelf1 = Shelf();
@@ -33,11 +32,6 @@ int main(){
     warehouse.addShelf(shelf2);
     warehouse.addShelf(shelf3);
 
-    // warehouse.pickItems("Books", 10);
-
-    // std::cout << shelf1.pallets[0].getItemName() << ", " << shelf1.pallets[0].getItemCount() << "\n";
-    // std::cout << shelf1.pallets[2].getItemName() << ", " << shelf1.pallets[2].getItemCount();
-
     int totalCount = 0;
     for (int x = 0; x < warehouse.shelves.size(); x++){
         for (int i; i < 4; i++){
@@ -46,8 +40,9 @@ int main(){
             }; 
         };
     };
-    std::cout << totalCount << "\n";
-    if (totalCount - 20 > 0){ 
+
+    if (totalCount - 23 > 0){ 
+        std::cout << totalCount << "\n";
         for (int x = 0; x < warehouse.shelves.size(); x++){
             if (totalCount == 0){
                 std::cout << "klaar" << "\n";
@@ -56,7 +51,8 @@ int main(){
             for (int i = 0; i < 4; i++){
                 if (warehouse.shelves[x].pallets[i].getItemName() == "Books"){
                     int temp = warehouse.shelves[x].pallets[i].getItemCount();
-                    std::cout << temp << "\n";
+                    std::cout << totalCount << "\n";
+                    // std::cout << temp << "\n";
                     if (totalCount == 0){
                         std::cout << "klaar" << "\n";
                         break;
@@ -66,13 +62,16 @@ int main(){
                     }
                     for (int y; y < temp; ++y){
                         warehouse.shelves[x].pallets[i].takeOne();
-                        }     
+                        totalCount -= 1;
+                        // std::cout << warehouse.shelves[x].pallets[i].getItemCount() << "\n";
+                        // std::cout << totalCount << "\n";
+                        }
                     }
                 }
             }
         }
 
-    warehouse.pickItems("Books", 23);
+    // warehouse.pickItems("Books", 23);
     std::cout << shelf1.pallets[0].getItemName() << ", " << shelf1.pallets[0].getItemCount() << "\n";
     std::cout << shelf1.pallets[2].getItemName() << ", " << shelf1.pallets[2].getItemCount();
     return 1;
