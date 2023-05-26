@@ -22,7 +22,7 @@ void Warehouse::addShelf(Shelf shelf){
 // };
 
 bool Warehouse::pickItems(std::string itemName, int itemCount){
-        int totalCount = 0;
+    int totalCount = 0;
     for (int x = 0; x < shelves.size(); x++){
         for (int i; i < 4; i++){
             if (shelves[x].pallets[i].getItemName() == "Books"){
@@ -30,34 +30,33 @@ bool Warehouse::pickItems(std::string itemName, int itemCount){
             }; 
         };
     };
+    
+    int totalCountEnd = totalCount - itemCount;
 
     if (totalCount - itemCount > 0){ 
-        std::cout << totalCount << "\n";
         for (int x = 0; x < shelves.size(); x++){
-            if (totalCount == 0){
-                // std::cout << "klaar" << "\n";
+            if (totalCount == totalCountEnd){
                 break;
                 }
             for (int i = 0; i < 4; i++){
                 if (shelves[x].pallets[i].getItemName() == "Books"){
+                    if (totalCount == totalCountEnd){
+                    break;
+                    }
                     int temp = shelves[x].pallets[i].getItemCount();
-                    std::cout << totalCount << "\n";
-                    // std::cout << temp << "\n";
-                    if (totalCount == 0){
-                        // std::cout << "klaar" << "\n";
+                    for (int y = 0; y < temp; ++y){
+                        if (totalCount == totalCountEnd){
                         break;
-                    }
-                    if (temp > totalCount){
-                        temp = totalCount;
-                    }
-                    for (int y; y < temp; ++y){
+                        }
                         shelves[x].pallets[i].takeOne();
                         totalCount -= 1;
-                        // std::cout << warehouse.shelves[x].pallets[i].getItemCount() << "\n";
-                        // std::cout << totalCount << "\n";
                         }
                     }
                 }
             }
+        return true;
+        }
+    else{
+        return false;
         }
     }
