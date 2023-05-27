@@ -27,50 +27,33 @@ int main(){
         Pallet(), 
         Pallet("Toy Bears", 100, 30)
     };
+
+    Shelf shelf4 = Shelf();
+    shelf4.pallets = {
+        Pallet("Toy Car", 100, 20), 
+        Pallet("Toy Car", 100, 10), 
+        Pallet("Toy Car", 100, 60), 
+        Pallet("Toy Car", 100, 30)
+    };
+
+    warehouse.addEmployee(Employee("Bob", true));
+    warehouse.addEmployee(Employee("Greg", false));
+    warehouse.addEmployee(Employee("Nick", false));
+
+    warehouse.Employees[0].setBusy(false);
+    warehouse.Employees[1].setBusy(true);
+    warehouse.Employees[2].setBusy(false);
     
     warehouse.addShelf(shelf1);
     warehouse.addShelf(shelf2);
     warehouse.addShelf(shelf3);
 
-    // int totalCount = 0;
-    // for (int x = 0; x < warehouse.shelves.size(); x++){
-    //     for (int i; i < 4; i++){
-    //         if (warehouse.shelves[x].pallets[i].getItemName() == "Books"){
-    //             totalCount += warehouse.shelves[x].pallets[i].getItemCount();
-    //         }; 
-    //     };
-    // };
-    
-    // int totalCountEnd = totalCount - 68;
-
-    // if (totalCount - 68 > 0){ 
-    //     for (int x = 0; x < warehouse.shelves.size(); x++){
-    //         if (totalCount == totalCountEnd){
-    //             break;
-    //             }
-    //         for (int i = 0; i < 4; i++){
-    //             if (warehouse.shelves[x].pallets[i].getItemName() == "Books"){
-    //                 if (totalCount == totalCountEnd){
-    //                 break;
-    //                 }
-    //                 int temp = warehouse.shelves[x].pallets[i].getItemCount();
-    //                 for (int y = 0; y < temp; ++y){
-    //                     if (totalCount == totalCountEnd){
-    //                     break;
-    //                     }
-    //                     warehouse.shelves[x].pallets[i].takeOne();
-    //                     totalCount -= 1;
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-
-    warehouse.pickItems("Books", 23);
-    std::cout << warehouse.shelves[0].pallets[0].getItemName() << ", " << warehouse.shelves[0].pallets[0].getItemCount() << "\n";
-    std::cout << warehouse.shelves[0].pallets[2].getItemName() << ", " << warehouse.shelves[0].pallets[2].getItemCount() << "\n";
-    std::cout << warehouse.shelves[0].pallets[3].getItemName() << ", " << warehouse.shelves[0].pallets[3].getItemCount() << "\n";
-
+    // warehouse.pickItems("Books", 68);
+    warehouse.rearrengeShelf(shelf1);
+    std::cout << shelf1.pallets[0].getItemName() << ", " << shelf1.pallets[0].getItemCount() << "\n";
+    std::cout << shelf1.pallets[1].getItemName() << ", " << shelf1.pallets[1].getItemCount() << "\n";
+    std::cout << shelf1.pallets[2].getItemName() << ", " << shelf1.pallets[2].getItemCount() << "\n";
+    std::cout << shelf1.pallets[3].getItemName() << ", " << shelf1.pallets[3].getItemCount() << "\n";
 
     return 1;
 };

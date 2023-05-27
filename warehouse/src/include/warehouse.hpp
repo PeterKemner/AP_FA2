@@ -10,6 +10,6 @@ class Warehouse{
         Warehouse();
         void addEmployee(Employee employee);
         void addShelf(Shelf shelf); 
-        bool rearrengeShelf(Shelf& shelf);
+        bool rearrangeShelf(Shelf& shelf);
         bool pickItems(std::string itemName, int itemCount);
 };

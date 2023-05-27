@@ -14,12 +14,24 @@ void Warehouse::addShelf(Shelf shelf){
     shelves.push_back(shelf);
 };
 
-// bool Warehouse::rearrengeShelf(Shelf& shelf){
-//     if (getForkliftCertificate == true){
+bool Warehouse::rearrangeShelf(Shelf& shelf){
+    for(int y = 0; y < Employees.size(); y++){
+        if (Employees[y].getForkliftCertificate() == true && Employees[y].getBusy() == false){
+            for (int x = 0; x < shelves.size(); x++){
+                for (int i = 0; i < 3; i++){
+                    int one = shelf.pallets[i].getItemCount();
+                    int two = shelf.pallets[i+1].getItemCount();
+                    if (one > two){
+                        shelf.swapPallet(i, (i+1));
+                    }
+                }
+            return true;
+            };
+        };
+        return false;
+    }
 
-//     };
-//     return false;
-// };
+};
 
 bool Warehouse::pickItems(std::string itemName, int itemCount){
     int totalCount = 0;
@@ -30,7 +42,7 @@ bool Warehouse::pickItems(std::string itemName, int itemCount){
             }; 
         };
     };
-    
+
     int totalCountEnd = totalCount - itemCount;
 
     if (totalCount - itemCount > 0){ 
@@ -55,8 +67,6 @@ bool Warehouse::pickItems(std::string itemName, int itemCount){
                 }
             }
         return true;
-        }
-    else{
-        return false;
-        }
+        } 
+    return false;
     }
