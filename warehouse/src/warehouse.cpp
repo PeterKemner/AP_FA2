@@ -58,7 +58,6 @@ bool Warehouse::pickItems(std::string itemName, int itemCount){
                     break;
                     }
                     int temp = shelves[x].pallets[i].getItemCount();
-                    shelves[x].pallets[i].takeOne();
                     for (int y = 0; y < temp; ++y){
                         if (totalCount == totalCountEnd){
                         break;

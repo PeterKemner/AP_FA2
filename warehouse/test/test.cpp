@@ -20,10 +20,10 @@ TEST_CASE("Picks certain amount of items from the shelf", "warehouse::pickItems"
     warehouse.addEmployee(Greg);
     warehouse.addShelf(shelf1);
 
-    warehouse.pickItems("Toy Cars", 34);
+    warehouse.pickItems("Toy Cars", 30);
 
     REQUIRE(warehouse.shelves[0].pallets[0].getItemCount() == 0);
-    REQUIRE(warehouse.shelves[0].pallets[1].getItemCount() == 66);
+    REQUIRE(warehouse.shelves[0].pallets[1].getItemCount() == 70);
     REQUIRE(warehouse.shelves[0].pallets[2].getItemCount() == 30);
     REQUIRE(warehouse.shelves[0].pallets[3].getItemCount() == 70);
 }
