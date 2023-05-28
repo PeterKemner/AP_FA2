@@ -1,15 +1,15 @@
 #include "..\src\include\shelf.hpp"
+#include "..\src\include\pallet.hpp"
 
-Shelf::Shelf(){};
+Shelf::Shelf(){
+    std::array<Pallet, 4> pallets;
+};
 
 bool Shelf::swapPallet(int slot, int slot2){
-    if (slot >= 0 && slot <= 3 or slot2 >= 0 and slot <= 3){
-        Pallet temp = pallets[slot];
-        pallets[slot] = pallets[slot2];
-        pallets[slot2] = temp;
-        return true;
-    }
-    return false;
+    Pallet temp = pallets[slot];
+    pallets[slot] = pallets[slot2];
+    pallets[slot2] = temp;
+    return true;
 };
 
 bool Shelf::isEmpty(){

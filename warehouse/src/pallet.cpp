@@ -6,7 +6,11 @@ Pallet::Pallet(std::string itemName, int itemCapacity, int itemCount){
     this-> itemCount = itemCount;
 };
 
-Pallet::Pallet(){};
+Pallet::Pallet(){
+    this-> itemName = "";
+    this-> itemCapacity = 0;
+    this-> itemCount = 0;
+};
 
 std::string Pallet::getItemName(){
     return this-> itemName;

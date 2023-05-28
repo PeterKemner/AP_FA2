@@ -4,7 +4,10 @@
 #include "..\src\include\pallet.hpp"
 #include <iostream>
 
-Warehouse::Warehouse(){};
+Warehouse::Warehouse(){
+    std::vector<Employee> Employees;
+    std::vector<Shelf> shelves;
+};
 
 void Warehouse::addEmployee(Employee employee){
     Employees.push_back(employee);
@@ -15,9 +18,9 @@ void Warehouse::addShelf(Shelf shelf){
 };
 
 bool Warehouse::rearrangeShelf(Shelf& shelf){
-    for(int y = 0; y < Employees.size(); y++){
+    for(int y = 0; y < ((int)Employees.size()); y++){
         if (Employees[y].getForkliftCertificate() == true && Employees[y].getBusy() == false){
-            for (int x = 0; x < shelves.size(); x++){
+            for (int x = 0; x < 5; x++){
                 for (int i = 0; i < 3; i++){
                     int one = shelf.pallets[i].getItemCount();
                     int two = shelf.pallets[i+1].getItemCount();
@@ -25,17 +28,16 @@ bool Warehouse::rearrangeShelf(Shelf& shelf){
                         shelf.swapPallet(i, (i+1));
                     }
                 }
-            return true;
             };
-        };
-        return false;
+        return true;
+        }
     }
-
+    return false;
 };
 
 bool Warehouse::pickItems(std::string itemName, int itemCount){
     int totalCount = 0;
-    for (int x = 0; x < shelves.size(); x++){
+    for (int x = 0; x < ((int)shelves.size()); x++){
         for (int i; i < 4; i++){
             if (shelves[x].pallets[i].getItemName() == "Books"){
                 totalCount += shelves[x].pallets[i].getItemCount();
@@ -46,7 +48,7 @@ bool Warehouse::pickItems(std::string itemName, int itemCount){
     int totalCountEnd = totalCount - itemCount;
 
     if (totalCount - itemCount > 0){ 
-        for (int x = 0; x < shelves.size(); x++){
+        for (int x = 0; x < ((int)shelves.size()); x++){
             if (totalCount == totalCountEnd){
                 break;
                 }
@@ -70,3 +72,4 @@ bool Warehouse::pickItems(std::string itemName, int itemCount){
         } 
     return false;
     }
+    
