@@ -39,7 +39,7 @@ bool Warehouse::pickItems(std::string itemName, int itemCount){
     int totalCount = 0;
     for (int x = 0; x < ((int)shelves.size()); x++){
         for (int i; i < 4; i++){
-            if (shelves[x].pallets[i].getItemName() == "Books"){
+            if (shelves[x].pallets[i].getItemName() == itemName){
                 totalCount += shelves[x].pallets[i].getItemCount();
             }; 
         };
@@ -47,17 +47,18 @@ bool Warehouse::pickItems(std::string itemName, int itemCount){
 
     int totalCountEnd = totalCount - itemCount;
 
-    if (totalCount - itemCount > 0){ 
+    if (totalCount != totalCountEnd){ 
         for (int x = 0; x < ((int)shelves.size()); x++){
             if (totalCount == totalCountEnd){
                 break;
                 }
             for (int i = 0; i < 4; i++){
-                if (shelves[x].pallets[i].getItemName() == "Books"){
+                if (shelves[x].pallets[i].getItemName() == itemName){
                     if (totalCount == totalCountEnd){
                     break;
                     }
                     int temp = shelves[x].pallets[i].getItemCount();
+                    shelves[x].pallets[i].takeOne();
                     for (int y = 0; y < temp; ++y){
                         if (totalCount == totalCountEnd){
                         break;
