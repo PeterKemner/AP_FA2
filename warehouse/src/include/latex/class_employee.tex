@@ -3,58 +3,26 @@
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_employee_aef7ce56c93b3d33fed372ca56d85f026}\label{class_employee_aef7ce56c93b3d33fed372ca56d85f026} 
-{\bfseries Employee} (std\+::string name, bool forklift\+Certificate)
-\item 
-std\+::string \mbox{\hyperlink{class_employee_a72d9305f328548a928929154dab5d2b7}{get\+Name}} ()
+\mbox{\hyperlink{class_employee_aef7ce56c93b3d33fed372ca56d85f026}{Employee}} (std\+::string name, bool forklift\+Certificate)
 \begin{DoxyCompactList}\small\item\em Constructor op basis van meegegeven waarden. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_employee_aaecec17d4bbf95cbe6d212f22743bf7a}{get\+Busy}} ()
+std\+::string \mbox{\hyperlink{class_employee_a72d9305f328548a928929154dab5d2b7}{get\+Name}} ()
 \begin{DoxyCompactList}\small\item\em Geeft naam van employee. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_employee_a18a5bb955aae9fe74b85647db202a2cf}{set\+Busy}} (bool busy)
+bool \mbox{\hyperlink{class_employee_aaecec17d4bbf95cbe6d212f22743bf7a}{get\+Busy}} ()
 \begin{DoxyCompactList}\small\item\em Geeft de status van de employee of ze busy zijn. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_employee_aab4c0e1f724ae2ff7161742689dd20cd}{get\+Forklift\+Certificate}} ()
+void \mbox{\hyperlink{class_employee_a18a5bb955aae9fe74b85647db202a2cf}{set\+Busy}} (bool busy)
 \begin{DoxyCompactList}\small\item\em Veranderd de busy status van een employee. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_employee_aab4c0e1f724ae2ff7161742689dd20cd}{get\+Forklift\+Certificate}} ()
+\begin{DoxyCompactList}\small\item\em Geeft de status van een employee of ze een forklift mogen gebruiken. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_employee_ae7fc6f5052ab924618570d358b8adf66}{set\+Forklift\+Certificate}} (bool forklift\+Certificate)
-\begin{DoxyCompactList}\small\item\em Geeft de status van een employee of ze een forklift mogen gebruiken. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Veranderd de forklift\+Certificate status van een employee. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Member Function Documentation}
-\Hypertarget{class_employee_aaecec17d4bbf95cbe6d212f22743bf7a}\label{class_employee_aaecec17d4bbf95cbe6d212f22743bf7a} 
-\index{Employee@{Employee}!getBusy@{getBusy}}
-\index{getBusy@{getBusy}!Employee@{Employee}}
-\doxysubsubsection{\texorpdfstring{getBusy()}{getBusy()}}
-{\footnotesize\ttfamily bool Employee\+::get\+Busy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Geeft naam van employee. 
-
-\begin{DoxyReturn}{Returns}
-De naam van de employee. 
-\end{DoxyReturn}
-\Hypertarget{class_employee_aab4c0e1f724ae2ff7161742689dd20cd}\label{class_employee_aab4c0e1f724ae2ff7161742689dd20cd} 
-\index{Employee@{Employee}!getForkliftCertificate@{getForkliftCertificate}}
-\index{getForkliftCertificate@{getForkliftCertificate}!Employee@{Employee}}
-\doxysubsubsection{\texorpdfstring{getForkliftCertificate()}{getForkliftCertificate()}}
-{\footnotesize\ttfamily bool Employee\+::get\+Forklift\+Certificate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Veranderd de busy status van een employee. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em busy} & De nieuwe stats van de employee. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Niet van toepassing 
-\end{DoxyReturn}
-\Hypertarget{class_employee_a72d9305f328548a928929154dab5d2b7}\label{class_employee_a72d9305f328548a928929154dab5d2b7} 
-\index{Employee@{Employee}!getName@{getName}}
-\index{getName@{getName}!Employee@{Employee}}
-\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
-{\footnotesize\ttfamily std\+::string Employee\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_employee_aef7ce56c93b3d33fed372ca56d85f026}\label{class_employee_aef7ce56c93b3d33fed372ca56d85f026} 
+\index{Employee@{Employee}!Employee@{Employee}}
+\index{Employee@{Employee}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{Employee()}{Employee()}}
+{\footnotesize\ttfamily Employee\+::\+Employee (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{bool}]{forklift\+Certificate }\end{DoxyParamCaption})}
 
 
 
@@ -70,6 +38,48 @@ Constructor op basis van meegegeven waarden.
 \begin{DoxyReturn}{Returns}
 Niet van toepassing. 
 \end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_employee_aaecec17d4bbf95cbe6d212f22743bf7a}\label{class_employee_aaecec17d4bbf95cbe6d212f22743bf7a} 
+\index{Employee@{Employee}!getBusy@{getBusy}}
+\index{getBusy@{getBusy}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{getBusy()}{getBusy()}}
+{\footnotesize\ttfamily bool Employee\+::get\+Busy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Geeft de status van de employee of ze busy zijn. 
+
+\begin{DoxyReturn}{Returns}
+Een bool van busy van een employee.. 
+\end{DoxyReturn}
+\Hypertarget{class_employee_aab4c0e1f724ae2ff7161742689dd20cd}\label{class_employee_aab4c0e1f724ae2ff7161742689dd20cd} 
+\index{Employee@{Employee}!getForkliftCertificate@{getForkliftCertificate}}
+\index{getForkliftCertificate@{getForkliftCertificate}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{getForkliftCertificate()}{getForkliftCertificate()}}
+{\footnotesize\ttfamily bool Employee\+::get\+Forklift\+Certificate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Geeft de status van een employee of ze een forklift mogen gebruiken. 
+
+\begin{DoxyReturn}{Returns}
+De bool van forklift\+Certificate van een employee. 
+\end{DoxyReturn}
+\Hypertarget{class_employee_a72d9305f328548a928929154dab5d2b7}\label{class_employee_a72d9305f328548a928929154dab5d2b7} 
+\index{Employee@{Employee}!getName@{getName}}
+\index{getName@{getName}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Employee\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Geeft naam van employee. 
+
+\begin{DoxyReturn}{Returns}
+De naam van de employee. 
+\end{DoxyReturn}
 \Hypertarget{class_employee_a18a5bb955aae9fe74b85647db202a2cf}\label{class_employee_a18a5bb955aae9fe74b85647db202a2cf} 
 \index{Employee@{Employee}!setBusy@{setBusy}}
 \index{setBusy@{setBusy}!Employee@{Employee}}
@@ -78,10 +88,16 @@ Niet van toepassing.
 
 
 
-Geeft de status van de employee of ze busy zijn. 
+Veranderd de busy status van een employee. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em busy} & De nieuwe stats van de employee. \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Een bool van busy van een employee.. 
+Niet van toepassing ~\newline
+ 
 \end{DoxyReturn}
 \Hypertarget{class_employee_ae7fc6f5052ab924618570d358b8adf66}\label{class_employee_ae7fc6f5052ab924618570d358b8adf66} 
 \index{Employee@{Employee}!setForkliftCertificate@{setForkliftCertificate}}
@@ -91,10 +107,15 @@ Een bool van busy van een employee..
 
 
 
-Geeft de status van een employee of ze een forklift mogen gebruiken. 
+Veranderd de forklift\+Certificate status van een employee. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em forklift\+Certificate} & De nieuwe status van de employee. \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-De bool van forklift\+Certificate van een employee. 
+Niet van toepassing 
 \end{DoxyReturn}
 
 

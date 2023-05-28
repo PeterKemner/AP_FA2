@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['icontainer_0',['IContainer',['../class_i_container.html',1,'']]],
-  ['isempty_1',['isEmpty',['../class_pallet.html#a7f3791171ad5c42ee1f39c60c6b4a561',1,'Pallet::isEmpty()'],['../class_shelf.html#a99ae0b49763e037c2de34543a3b48fbf',1,'Shelf::isEmpty()']]],
-  ['isfull_2',['isFull',['../class_i_container.html#af692ebc216d626293e70fd51af4371ff',1,'IContainer::isFull()'],['../class_pallet.html#a5bc07da739397b10f671652e3d3daff2',1,'Pallet::isFull()'],['../class_shelf.html#a0d3e82f83e2e98001cf78a76b116c62d',1,'Shelf::isFull()']]]
+  ['getbusy_0',['getBusy',['../class_employee.html#aaecec17d4bbf95cbe6d212f22743bf7a',1,'Employee']]],
+  ['getforkliftcertificate_1',['getForkliftCertificate',['../class_employee.html#aab4c0e1f724ae2ff7161742689dd20cd',1,'Employee']]],
+  ['getitemcount_2',['getItemCount',['../class_pallet.html#a6fb72d96f65cc75e7b29beb386a255dc',1,'Pallet']]],
+  ['getitemname_3',['getItemName',['../class_pallet.html#a5dd9952545953a756c9facf8a6865b13',1,'Pallet']]],
+  ['getname_4',['getName',['../class_employee.html#a72d9305f328548a928929154dab5d2b7',1,'Employee']]],
+  ['getremainingspace_5',['getRemainingSpace',['../class_pallet.html#aa8e3b0089ab3b1ccc5cc68df88133da8',1,'Pallet']]]
 ];

@@ -79,17 +79,20 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad9b82ec22ca263eb15fc0ed9521e06c3"><td class="memItemLeft" align="right" valign="top"><a id="ad9b82ec22ca263eb15fc0ed9521e06c3" name="ad9b82ec22ca263eb15fc0ed9521e06c3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addEmployee</b> (<a class="el" href="class_employee.html">Employee</a> employee)</td></tr>
+<tr class="memitem:af8d6c7e60cb3be65b35702b400e8fad7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_warehouse.html#af8d6c7e60cb3be65b35702b400e8fad7">Warehouse</a> ()</td></tr>
+<tr class="memdesc:af8d6c7e60cb3be65b35702b400e8fad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor voor wanneer er geen shelves worden meegegeven.  <br /></td></tr>
+<tr class="separator:af8d6c7e60cb3be65b35702b400e8fad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9b82ec22ca263eb15fc0ed9521e06c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_warehouse.html#ad9b82ec22ca263eb15fc0ed9521e06c3">addEmployee</a> (<a class="el" href="class_employee.html">Employee</a> employee)</td></tr>
+<tr class="memdesc:ad9b82ec22ca263eb15fc0ed9521e06c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Voegt een nieuwe employee toe aan de Employees vector.  <br /></td></tr>
 <tr class="separator:ad9b82ec22ca263eb15fc0ed9521e06c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fd09736bf4efc34a16ded6552677a50"><td class="memItemLeft" align="right" valign="top"><a id="a0fd09736bf4efc34a16ded6552677a50" name="a0fd09736bf4efc34a16ded6552677a50"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addShelf</b> (<a class="el" href="class_shelf.html">Shelf</a> shelf)</td></tr>
+<tr class="memitem:a0fd09736bf4efc34a16ded6552677a50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_warehouse.html#a0fd09736bf4efc34a16ded6552677a50">addShelf</a> (<a class="el" href="class_shelf.html">Shelf</a> shelf)</td></tr>
+<tr class="memdesc:a0fd09736bf4efc34a16ded6552677a50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Voegt een nieuwe shelf toe aan de shelves vector.  <br /></td></tr>
 <tr class="separator:a0fd09736bf4efc34a16ded6552677a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30b36b94053660501e8620650462586f"><td class="memItemLeft" align="right" valign="top"><a id="a30b36b94053660501e8620650462586f" name="a30b36b94053660501e8620650462586f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>rearrangeShelf</b> (<a class="el" href="class_shelf.html">Shelf</a> &amp;shelf)</td></tr>
+<tr class="memitem:a30b36b94053660501e8620650462586f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_warehouse.html#a30b36b94053660501e8620650462586f">rearrangeShelf</a> (<a class="el" href="class_shelf.html">Shelf</a> &amp;shelf)</td></tr>
+<tr class="memdesc:a30b36b94053660501e8620650462586f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorteert de pallets in een shelf op oplopende volgorde als er een employee is met een forkliftcertificate.  <br /></td></tr>
 <tr class="separator:a30b36b94053660501e8620650462586f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41bff16104288af125c7e7dcc02f39af"><td class="memItemLeft" align="right" valign="top"><a id="a41bff16104288af125c7e7dcc02f39af" name="a41bff16104288af125c7e7dcc02f39af"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>pickItems</b> (std::string itemName, int itemCount)</td></tr>
+<tr class="memitem:a41bff16104288af125c7e7dcc02f39af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_warehouse.html#a41bff16104288af125c7e7dcc02f39af">pickItems</a> (std::string itemName, int itemCount)</td></tr>
+<tr class="memdesc:a41bff16104288af125c7e7dcc02f39af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Haalt items uit de pallets over de alle shelfs, hoeveel keer, en welk item wordt meegegeven.  <br /></td></tr>
 <tr class="separator:a41bff16104288af125c7e7dcc02f39af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -101,6 +104,148 @@ std::vector&lt; <a class="el" href="class_employee.html">Employee</a> &gt;&#160;
 std::vector&lt; <a class="el" href="class_shelf.html">Shelf</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shelves</b></td></tr>
 <tr class="separator:a4f0296952fe224c1d5a09e16e2689e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af8d6c7e60cb3be65b35702b400e8fad7" name="af8d6c7e60cb3be65b35702b400e8fad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8d6c7e60cb3be65b35702b400e8fad7">&#9670;&#160;</a></span>Warehouse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Warehouse::Warehouse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor voor wanneer er geen shelves worden meegegeven. </p>
+<dl class="section return"><dt>Returns</dt><dd>Niet van toepassing. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad9b82ec22ca263eb15fc0ed9521e06c3" name="ad9b82ec22ca263eb15fc0ed9521e06c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9b82ec22ca263eb15fc0ed9521e06c3">&#9670;&#160;</a></span>addEmployee()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Warehouse::addEmployee </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_employee.html">Employee</a>&#160;</td>
+          <td class="paramname"><em>employee</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Voegt een nieuwe employee toe aan de Employees vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">employee</td><td>Is een employee van de employee klasse. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Niet van toepassing. </dd></dl>
+
+</div>
+</div>
+<a id="a0fd09736bf4efc34a16ded6552677a50" name="a0fd09736bf4efc34a16ded6552677a50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fd09736bf4efc34a16ded6552677a50">&#9670;&#160;</a></span>addShelf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Warehouse::addShelf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shelf.html">Shelf</a>&#160;</td>
+          <td class="paramname"><em>shelf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Voegt een nieuwe shelf toe aan de shelves vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shelf</td><td>Is een shelf van de shelf klasse. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Niet van toepassing. <br  />
+ </dd></dl>
+
+</div>
+</div>
+<a id="a41bff16104288af125c7e7dcc02f39af" name="a41bff16104288af125c7e7dcc02f39af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41bff16104288af125c7e7dcc02f39af">&#9670;&#160;</a></span>pickItems()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Warehouse::pickItems </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>itemName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>itemCount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Haalt items uit de pallets over de alle shelfs, hoeveel keer, en welk item wordt meegegeven. </p>
+<p>Als eerst wordt er twee for loops gestart die door alle shelfs en pallets kijken voor de item naam die is meegegeven en alle itemCount worden opgeteld in de variable totalCount. Na die loops wordt een variable gemaakt: totalCountEnd, dat is wat de totalCount moet zijn nadat alle items van de pallet zijn afgehaald. Daarna worden er twee for loops gestart die door alle shelf en pallets zoeken die dezelfde naam hebben als de naam die is meegegeven, zodra er 1 is gevonden word er een for loop gestart met als lengte het aantal op die pallet, die takeOne() aanroept en totalCount -= 1. Dit blijft gebeuren totdat de totalCount even veel is als de totalCountEnd, en wanner die gelijk zijn stoppen alle for loops en wordt er true gereturned </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">itemName</td><td>De naam van het item. </td></tr>
+    <tr><td class="paramname">itemCount</td><td>De hoeveelheid van hoeveel er van het item wordt weggehaald. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Een bool, als het lukt: true anders false. </dd></dl>
+
+</div>
+</div>
+<a id="a30b36b94053660501e8620650462586f" name="a30b36b94053660501e8620650462586f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30b36b94053660501e8620650462586f">&#9670;&#160;</a></span>rearrangeShelf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Warehouse::rearrangeShelf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shelf.html">Shelf</a> &amp;&#160;</td>
+          <td class="paramname"><em>shelf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sorteert de pallets in een shelf op oplopende volgorde als er een employee is met een forkliftcertificate. </p>
+<p>Als eerst wordt er een loop gestart die door Employees lijst kijkt, als er een employee is die niet busy is en een forkliftcertificate heeft gaat verder naar de volgende loop, daarna wordt een loop 5 keer geloopt door een andere loop, die kijkt of de eerste pallet kleiner is dan de volgende pallet, als dat zo is dan gebruikt het swapPallet zodat ze veranderen van positie, zodra de loops klaar zijn wordt er true gereturned en als er geen employee is die niet busy is en een forkliftcertificate dan wordt er false gereturned. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shelf</td><td>De shelf die wordt gesorteert en als vanaf het begin de totalCount en de totalCountEnd gelijk zijn hoeft er niks weggehaalt worden en wordt er false gereturned. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Een bool, als het gelukt is: true, anders false. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="warehouse_8hpp_source.html">warehouse.hpp</a></li>
 </ul>

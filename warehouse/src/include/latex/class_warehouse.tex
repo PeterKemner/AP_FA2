@@ -3,18 +3,16 @@
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_warehouse_ad9b82ec22ca263eb15fc0ed9521e06c3}\label{class_warehouse_ad9b82ec22ca263eb15fc0ed9521e06c3} 
-void {\bfseries add\+Employee} (\mbox{\hyperlink{class_employee}{Employee}} employee)
-\item 
-\Hypertarget{class_warehouse_a0fd09736bf4efc34a16ded6552677a50}\label{class_warehouse_a0fd09736bf4efc34a16ded6552677a50} 
-void {\bfseries add\+Shelf} (\mbox{\hyperlink{class_shelf}{Shelf}} shelf)
-\item 
-\Hypertarget{class_warehouse_a30b36b94053660501e8620650462586f}\label{class_warehouse_a30b36b94053660501e8620650462586f} 
-bool {\bfseries rearrange\+Shelf} (\mbox{\hyperlink{class_shelf}{Shelf}} \&shelf)
-\item 
-\Hypertarget{class_warehouse_a41bff16104288af125c7e7dcc02f39af}\label{class_warehouse_a41bff16104288af125c7e7dcc02f39af} 
-bool {\bfseries pick\+Items} (std\+::string item\+Name, int item\+Count)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_warehouse_af8d6c7e60cb3be65b35702b400e8fad7}{Warehouse}} ()
+\begin{DoxyCompactList}\small\item\em Constructor voor wanneer er geen shelves worden meegegeven. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_warehouse_ad9b82ec22ca263eb15fc0ed9521e06c3}{add\+Employee}} (\mbox{\hyperlink{class_employee}{Employee}} employee)
+\begin{DoxyCompactList}\small\item\em Voegt een nieuwe employee toe aan de Employees vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_warehouse_a0fd09736bf4efc34a16ded6552677a50}{add\+Shelf}} (\mbox{\hyperlink{class_shelf}{Shelf}} shelf)
+\begin{DoxyCompactList}\small\item\em Voegt een nieuwe shelf toe aan de shelves vector. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_warehouse_a30b36b94053660501e8620650462586f}{rearrange\+Shelf}} (\mbox{\hyperlink{class_shelf}{Shelf}} \&shelf)
+\begin{DoxyCompactList}\small\item\em Sorteert de pallets in een shelf op oplopende volgorde als er een employee is met een forkliftcertificate. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_warehouse_a41bff16104288af125c7e7dcc02f39af}{pick\+Items}} (std\+::string item\+Name, int item\+Count)
+\begin{DoxyCompactList}\small\item\em Haalt items uit de pallets over de alle shelfs, hoeveel keer, en welk item wordt meegegeven. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -24,6 +22,100 @@ std\+::vector$<$ \mbox{\hyperlink{class_employee}{Employee}} $>$ {\bfseries Empl
 \Hypertarget{class_warehouse_a4f0296952fe224c1d5a09e16e2689e47}\label{class_warehouse_a4f0296952fe224c1d5a09e16e2689e47} 
 std\+::vector$<$ \mbox{\hyperlink{class_shelf}{Shelf}} $>$ {\bfseries shelves}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_warehouse_af8d6c7e60cb3be65b35702b400e8fad7}\label{class_warehouse_af8d6c7e60cb3be65b35702b400e8fad7} 
+\index{Warehouse@{Warehouse}!Warehouse@{Warehouse}}
+\index{Warehouse@{Warehouse}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{Warehouse()}{Warehouse()}}
+{\footnotesize\ttfamily Warehouse\+::\+Warehouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor voor wanneer er geen shelves worden meegegeven. 
+
+\begin{DoxyReturn}{Returns}
+Niet van toepassing. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_warehouse_ad9b82ec22ca263eb15fc0ed9521e06c3}\label{class_warehouse_ad9b82ec22ca263eb15fc0ed9521e06c3} 
+\index{Warehouse@{Warehouse}!addEmployee@{addEmployee}}
+\index{addEmployee@{addEmployee}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{addEmployee()}{addEmployee()}}
+{\footnotesize\ttfamily void Warehouse\+::add\+Employee (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_employee}{Employee}}}]{employee }\end{DoxyParamCaption})}
+
+
+
+Voegt een nieuwe employee toe aan de Employees vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee} & Is een employee van de employee klasse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Niet van toepassing. 
+\end{DoxyReturn}
+\Hypertarget{class_warehouse_a0fd09736bf4efc34a16ded6552677a50}\label{class_warehouse_a0fd09736bf4efc34a16ded6552677a50} 
+\index{Warehouse@{Warehouse}!addShelf@{addShelf}}
+\index{addShelf@{addShelf}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{addShelf()}{addShelf()}}
+{\footnotesize\ttfamily void Warehouse\+::add\+Shelf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_shelf}{Shelf}}}]{shelf }\end{DoxyParamCaption})}
+
+
+
+Voegt een nieuwe shelf toe aan de shelves vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shelf} & Is een shelf van de shelf klasse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Niet van toepassing. ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_warehouse_a41bff16104288af125c7e7dcc02f39af}\label{class_warehouse_a41bff16104288af125c7e7dcc02f39af} 
+\index{Warehouse@{Warehouse}!pickItems@{pickItems}}
+\index{pickItems@{pickItems}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{pickItems()}{pickItems()}}
+{\footnotesize\ttfamily bool Warehouse\+::pick\+Items (\begin{DoxyParamCaption}\item[{std\+::string}]{item\+Name,  }\item[{int}]{item\+Count }\end{DoxyParamCaption})}
+
+
+
+Haalt items uit de pallets over de alle shelfs, hoeveel keer, en welk item wordt meegegeven. 
+
+Als eerst wordt er twee for loops gestart die door alle shelfs en pallets kijken voor de item naam die is meegegeven en alle item\+Count worden opgeteld in de variable total\+Count. Na die loops wordt een variable gemaakt\+: total\+Count\+End, dat is wat de total\+Count moet zijn nadat alle items van de pallet zijn afgehaald. Daarna worden er twee for loops gestart die door alle shelf en pallets zoeken die dezelfde naam hebben als de naam die is meegegeven, zodra er 1 is gevonden word er een for loop gestart met als lengte het aantal op die pallet, die take\+One() aanroept en total\+Count -\/= 1. Dit blijft gebeuren totdat de total\+Count even veel is als de total\+Count\+End, en wanner die gelijk zijn stoppen alle for loops en wordt er true gereturned 
+\begin{DoxyParams}{Parameters}
+{\em item\+Name} & De naam van het item. \\
+\hline
+{\em item\+Count} & De hoeveelheid van hoeveel er van het item wordt weggehaald. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Een bool, als het lukt\+: true anders false. 
+\end{DoxyReturn}
+\Hypertarget{class_warehouse_a30b36b94053660501e8620650462586f}\label{class_warehouse_a30b36b94053660501e8620650462586f} 
+\index{Warehouse@{Warehouse}!rearrangeShelf@{rearrangeShelf}}
+\index{rearrangeShelf@{rearrangeShelf}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{rearrangeShelf()}{rearrangeShelf()}}
+{\footnotesize\ttfamily bool Warehouse\+::rearrange\+Shelf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_shelf}{Shelf}} \&}]{shelf }\end{DoxyParamCaption})}
+
+
+
+Sorteert de pallets in een shelf op oplopende volgorde als er een employee is met een forkliftcertificate. 
+
+Als eerst wordt er een loop gestart die door Employees lijst kijkt, als er een employee is die niet busy is en een forkliftcertificate heeft gaat verder naar de volgende loop, daarna wordt een loop 5 keer geloopt door een andere loop, die kijkt of de eerste pallet kleiner is dan de volgende pallet, als dat zo is dan gebruikt het swap\+Pallet zodat ze veranderen van positie, zodra de loops klaar zijn wordt er true gereturned en als er geen employee is die niet busy is en een forkliftcertificate dan wordt er false gereturned. 
+\begin{DoxyParams}{Parameters}
+{\em shelf} & De shelf die wordt gesorteert en als vanaf het begin de total\+Count en de total\+Count\+End gelijk zijn hoeft er niks weggehaalt worden en wordt er false gereturned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Een bool, als het gelukt is\+: true, anders false. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

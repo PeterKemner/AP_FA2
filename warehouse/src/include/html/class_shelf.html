@@ -88,6 +88,9 @@ Inheritance diagram for Shelf:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:abb45551000814ead7cdf342c2681f64e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shelf.html#abb45551000814ead7cdf342c2681f64e">Shelf</a> ()</td></tr>
+<tr class="memdesc:abb45551000814ead7cdf342c2681f64e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor op basis van meegegeven waarden.  <br /></td></tr>
+<tr class="separator:abb45551000814ead7cdf342c2681f64e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a559533b744aba1f3b835c41095a1e30c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shelf.html#a559533b744aba1f3b835c41095a1e30c">swapPallet</a> (int slot, int slot2)</td></tr>
 <tr class="memdesc:a559533b744aba1f3b835c41095a1e30c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor op basis van meegegeven waarden.  <br /></td></tr>
 <tr class="separator:a559533b744aba1f3b835c41095a1e30c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -98,9 +101,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0d3e82f83e2e98001cf78a76b116c62d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor op basis van meegegeven waarden.  <br /></td></tr>
 <tr class="separator:a0d3e82f83e2e98001cf78a76b116c62d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a510aa2b22b984feebbd2d97c28b3c964"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container.html#a510aa2b22b984feebbd2d97c28b3c964">isEmpty</a> ()=0</td></tr>
+<tr class="memdesc:a510aa2b22b984feebbd2d97c28b3c964"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geeft aan of een pallet leeg is of niet.  <br /></td></tr>
 <tr class="separator:a510aa2b22b984feebbd2d97c28b3c964"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af692ebc216d626293e70fd51af4371ff"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container.html#af692ebc216d626293e70fd51af4371ff">isFull</a> ()=0</td></tr>
-<tr class="memdesc:af692ebc216d626293e70fd51af4371ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geeft aan of een pallet leeg is of niet.  <br /></td></tr>
+<tr class="memdesc:af692ebc216d626293e70fd51af4371ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geeft aan of een pallet vol is of niet.  <br /></td></tr>
 <tr class="separator:af692ebc216d626293e70fd51af4371ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -109,6 +113,34 @@ Public Attributes</h2></td></tr>
 std::array&lt; <a class="el" href="class_pallet.html">Pallet</a>, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pallets</b></td></tr>
 <tr class="separator:ad4cbb2fbb9d6064e01213b9667db1b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="abb45551000814ead7cdf342c2681f64e" name="abb45551000814ead7cdf342c2681f64e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb45551000814ead7cdf342c2681f64e">&#9670;&#160;</a></span>Shelf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Shelf::Shelf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor op basis van meegegeven waarden. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>De naam van de employee. </td></tr>
+    <tr><td class="paramname">forkliftCertificate</td><td>De certificate waarmee de employees pallets kunnen verplaatsen. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Niet van toepassing. </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a99ae0b49763e037c2de34543a3b48fbf" name="a99ae0b49763e037c2de34543a3b48fbf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a99ae0b49763e037c2de34543a3b48fbf">&#9670;&#160;</a></span>isEmpty()</h2>
@@ -143,7 +175,7 @@ std::array&lt; <a class="el" href="class_pallet.html">Pallet</a>, 4 &gt;&#160;</
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Niet van toepassing. </dd></dl>
 
-<p>Implements <a class="el" href="class_i_container.html">IContainer</a>.</p>
+<p>Implements <a class="el" href="class_i_container.html#a510aa2b22b984feebbd2d97c28b3c964">IContainer</a>.</p>
 
 </div>
 </div>

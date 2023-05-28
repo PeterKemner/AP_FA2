@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['takeone_0',['takeOne',['../class_pallet.html#a30a95ee46e5459bbc6c61ffd76e084ba',1,'Pallet']]]
+  ['reallocateemptypallet_0',['reallocateEmptyPallet',['../class_pallet.html#ae274fa61722357a8f0adcb5a569ff9fc',1,'Pallet']]],
+  ['rearrangeshelf_1',['rearrangeShelf',['../class_warehouse.html#a30b36b94053660501e8620650462586f',1,'Warehouse']]]
 ];
