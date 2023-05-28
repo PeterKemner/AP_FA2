@@ -1,0 +1,190 @@
+\doxysection{Pallet Class Reference}
+\hypertarget{class_pallet}{}\label{class_pallet}\index{Pallet@{Pallet}}
+Inheritance diagram for Pallet\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pallet}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_pallet_aec20566b32678e9f04a749d2162592cc}\label{class_pallet_aec20566b32678e9f04a749d2162592cc} 
+{\bfseries Pallet} (std\+::string item\+Name, int item\+Capacity, int item\+Count)
+\item 
+\mbox{\hyperlink{class_pallet_a597d44591272e8b018b6fe5321f7a7df}{Pallet}} ()
+\begin{DoxyCompactList}\small\item\em Constructor op basis van meegegeven waarden. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_pallet_a5dd9952545953a756c9facf8a6865b13}{get\+Item\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Constructor voor lege pallets, zorgt ervoor als je een lege pallet mee geeft de naam niks is, capacity 0 is en count ook 0. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pallet_a6fb72d96f65cc75e7b29beb386a255dc}{get\+Item\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Geeft de naam van het item. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pallet_aa8e3b0089ab3b1ccc5cc68df88133da8}{get\+Remaining\+Space}} ()
+\begin{DoxyCompactList}\small\item\em Geeft de hoveelheid van het item die op de pallet liggen. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pallet_ae274fa61722357a8f0adcb5a569ff9fc}{reallocate\+Empty\+Pallet}} (std\+::string item\+Name, int item\+Capacity)
+\begin{DoxyCompactList}\small\item\em Geeft hoeveel plaats er nog op de pallet is. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pallet_a30a95ee46e5459bbc6c61ffd76e084ba}{take\+One}} ()
+\begin{DoxyCompactList}\small\item\em Wanneer de pallet leeg is, wordt naam en de capacity veranderd naar de meegegeven waarden. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pallet_a94d718d10bc43554cfd7e9e35c13e43b}{put\+One}} ()
+\begin{DoxyCompactList}\small\item\em Haalt 1 van de item\+Count af van een pallet. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pallet_a7f3791171ad5c42ee1f39c60c6b4a561}{is\+Empty}} () override
+\begin{DoxyCompactList}\small\item\em Voegt 1 toe de item\+Count af van een pallet. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pallet_a5bc07da739397b10f671652e3d3daff2}{is\+Full}} () override
+\begin{DoxyCompactList}\small\item\em Geeft aan of een pallet leeg is of niet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_i_container_a510aa2b22b984feebbd2d97c28b3c964}{is\+Empty}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{class_i_container_af692ebc216d626293e70fd51af4371ff}{is\+Full}} ()=0
+\begin{DoxyCompactList}\small\item\em Geeft aan of een pallet leeg is of niet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_pallet_a597d44591272e8b018b6fe5321f7a7df}\label{class_pallet_a597d44591272e8b018b6fe5321f7a7df} 
+\index{Pallet@{Pallet}!Pallet@{Pallet}}
+\index{Pallet@{Pallet}!Pallet@{Pallet}}
+\doxysubsubsection{\texorpdfstring{Pallet()}{Pallet()}}
+{\footnotesize\ttfamily Pallet\+::\+Pallet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor op basis van meegegeven waarden. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item\+Name} & De naam van wat op de pallet ligt. \\
+\hline
+{\em item\+Capacity} & Het maximaal aantal objecten op de pallet. \\
+\hline
+{\em item\+Count} & Het aantal van het object dat er nu op de pallet liggen. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Niet van toepassing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pallet_a6fb72d96f65cc75e7b29beb386a255dc}\label{class_pallet_a6fb72d96f65cc75e7b29beb386a255dc} 
+\index{Pallet@{Pallet}!getItemCount@{getItemCount}}
+\index{getItemCount@{getItemCount}!Pallet@{Pallet}}
+\doxysubsubsection{\texorpdfstring{getItemCount()}{getItemCount()}}
+{\footnotesize\ttfamily int Pallet\+::get\+Item\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Geeft de naam van het item. 
+
+\begin{DoxyReturn}{Returns}
+De naam van het item. 
+\end{DoxyReturn}
+\Hypertarget{class_pallet_a5dd9952545953a756c9facf8a6865b13}\label{class_pallet_a5dd9952545953a756c9facf8a6865b13} 
+\index{Pallet@{Pallet}!getItemName@{getItemName}}
+\index{getItemName@{getItemName}!Pallet@{Pallet}}
+\doxysubsubsection{\texorpdfstring{getItemName()}{getItemName()}}
+{\footnotesize\ttfamily std\+::string Pallet\+::get\+Item\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor voor lege pallets, zorgt ervoor als je een lege pallet mee geeft de naam niks is, capacity 0 is en count ook 0. 
+
+\begin{DoxyReturn}{Returns}
+Niet van toepassing 
+\end{DoxyReturn}
+\Hypertarget{class_pallet_aa8e3b0089ab3b1ccc5cc68df88133da8}\label{class_pallet_aa8e3b0089ab3b1ccc5cc68df88133da8} 
+\index{Pallet@{Pallet}!getRemainingSpace@{getRemainingSpace}}
+\index{getRemainingSpace@{getRemainingSpace}!Pallet@{Pallet}}
+\doxysubsubsection{\texorpdfstring{getRemainingSpace()}{getRemainingSpace()}}
+{\footnotesize\ttfamily int Pallet\+::get\+Remaining\+Space (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Geeft de hoveelheid van het item die op de pallet liggen. 
+
+\begin{DoxyReturn}{Returns}
+Het getal van hoveel van het item op de pallet ligt. 
+\end{DoxyReturn}
+\Hypertarget{class_pallet_a7f3791171ad5c42ee1f39c60c6b4a561}\label{class_pallet_a7f3791171ad5c42ee1f39c60c6b4a561} 
+\index{Pallet@{Pallet}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Pallet@{Pallet}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool Pallet\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Voegt 1 toe de item\+Count af van een pallet. 
+
+\begin{DoxyReturn}{Returns}
+Een bool, true als het gelukt is, anders false. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_container}{IContainer}}.
+
+\Hypertarget{class_pallet_a5bc07da739397b10f671652e3d3daff2}\label{class_pallet_a5bc07da739397b10f671652e3d3daff2} 
+\index{Pallet@{Pallet}!isFull@{isFull}}
+\index{isFull@{isFull}!Pallet@{Pallet}}
+\doxysubsubsection{\texorpdfstring{isFull()}{isFull()}}
+{\footnotesize\ttfamily bool Pallet\+::is\+Full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Geeft aan of een pallet leeg is of niet. 
+
+\begin{DoxyReturn}{Returns}
+Een bool, true als de pallet leeg is, anders false. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_container_af692ebc216d626293e70fd51af4371ff}{IContainer}}.
+
+\Hypertarget{class_pallet_a94d718d10bc43554cfd7e9e35c13e43b}\label{class_pallet_a94d718d10bc43554cfd7e9e35c13e43b} 
+\index{Pallet@{Pallet}!putOne@{putOne}}
+\index{putOne@{putOne}!Pallet@{Pallet}}
+\doxysubsubsection{\texorpdfstring{putOne()}{putOne()}}
+{\footnotesize\ttfamily bool Pallet\+::put\+One (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Haalt 1 van de item\+Count af van een pallet. 
+
+\begin{DoxyReturn}{Returns}
+Een bool, true als het gelukt is, anders false. 
+\end{DoxyReturn}
+\Hypertarget{class_pallet_ae274fa61722357a8f0adcb5a569ff9fc}\label{class_pallet_ae274fa61722357a8f0adcb5a569ff9fc} 
+\index{Pallet@{Pallet}!reallocateEmptyPallet@{reallocateEmptyPallet}}
+\index{reallocateEmptyPallet@{reallocateEmptyPallet}!Pallet@{Pallet}}
+\doxysubsubsection{\texorpdfstring{reallocateEmptyPallet()}{reallocateEmptyPallet()}}
+{\footnotesize\ttfamily bool Pallet\+::reallocate\+Empty\+Pallet (\begin{DoxyParamCaption}\item[{std\+::string}]{item\+Name,  }\item[{int}]{item\+Capacity }\end{DoxyParamCaption})}
+
+
+
+Geeft hoeveel plaats er nog op de pallet is. 
+
+\begin{DoxyReturn}{Returns}
+Het getal van hoeveel er nog op de pallet kan. 
+\end{DoxyReturn}
+\Hypertarget{class_pallet_a30a95ee46e5459bbc6c61ffd76e084ba}\label{class_pallet_a30a95ee46e5459bbc6c61ffd76e084ba} 
+\index{Pallet@{Pallet}!takeOne@{takeOne}}
+\index{takeOne@{takeOne}!Pallet@{Pallet}}
+\doxysubsubsection{\texorpdfstring{takeOne()}{takeOne()}}
+{\footnotesize\ttfamily bool Pallet\+::take\+One (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Wanneer de pallet leeg is, wordt naam en de capacity veranderd naar de meegegeven waarden. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item\+Name} & De naam van wat op de pallet ligt. \\
+\hline
+{\em item\+Capacity} & Het maximaal aantal objecten op de pallet. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Een bool, true als het gelukt is, anders false. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pallet.\+hpp\end{DoxyCompactItemize}

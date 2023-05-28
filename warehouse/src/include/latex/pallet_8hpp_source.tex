@@ -1,0 +1,37 @@
+\doxysection{pallet.\+hpp}
+\hypertarget{pallet_8hpp_source}{}\label{pallet_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}IContainer.hpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pallet}{Pallet}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_container}{IContainer}}\{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{int}\ itemCount;}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ std::string\ itemName;}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{int}\ itemCapacity;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pallet_a597d44591272e8b018b6fe5321f7a7df}{Pallet}}(std::string\ itemName,\ \textcolor{keywordtype}{int}\ itemCapacity,\ \textcolor{keywordtype}{int}\ itemCount);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pallet_a597d44591272e8b018b6fe5321f7a7df}{Pallet}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_pallet_a5dd9952545953a756c9facf8a6865b13}{getItemName}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_pallet_a6fb72d96f65cc75e7b29beb386a255dc}{getItemCount}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_pallet_aa8e3b0089ab3b1ccc5cc68df88133da8}{getRemainingSpace}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_pallet_ae274fa61722357a8f0adcb5a569ff9fc}{reallocateEmptyPallet}}(std::string\ itemName,\ \textcolor{keywordtype}{int}\ itemCapacity);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_pallet_a30a95ee46e5459bbc6c61ffd76e084ba}{takeOne}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_pallet_a94d718d10bc43554cfd7e9e35c13e43b}{putOne}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_pallet_a7f3791171ad5c42ee1f39c60c6b4a561}{isEmpty}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_pallet_a5bc07da739397b10f671652e3d3daff2}{isFull}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \};}
+
+\end{DoxyCode}

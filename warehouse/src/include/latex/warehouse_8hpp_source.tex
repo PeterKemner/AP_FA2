@@ -1,0 +1,20 @@
+\doxysection{warehouse.\+hpp}
+\hypertarget{warehouse_8hpp_source}{}\label{warehouse_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}employee.hpp"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}shelf.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_warehouse}{Warehouse}}\{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ std::vector<Employee>\ Employees;}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ std::vector<Shelf>\ shelves;}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_warehouse}{Warehouse}}();}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ addEmployee(\mbox{\hyperlink{class_employee}{Employee}}\ employee);}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ addShelf(\mbox{\hyperlink{class_shelf}{Shelf}}\ shelf);\ }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ rearrangeShelf(\mbox{\hyperlink{class_shelf}{Shelf}}\&\ shelf);}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ pickItems(std::string\ itemName,\ \textcolor{keywordtype}{int}\ itemCount);}
+\DoxyCodeLine{00015\ \};}
+
+\end{DoxyCode}
