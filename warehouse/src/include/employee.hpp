@@ -22,7 +22,7 @@ class Employee{
 
         /// @brief
         /// Geeft de status van de employee of ze busy zijn.
-        /// @return Een bool van busy van een employee..
+        /// @return Een bool van busy van een employee.
         bool getBusy();
 
         /// @brief
