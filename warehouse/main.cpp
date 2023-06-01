@@ -68,5 +68,4 @@ Warehouse warehouse = Warehouse();
 
     std::cout << "\n";
 
-
 };
